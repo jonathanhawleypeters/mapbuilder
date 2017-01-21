@@ -3,8 +3,8 @@ console.log("map canvas ready");
 var canvas = document.getElementById('canvas-map');
 	ctx = canvas.getContext('2d');
 	imageObj = new Image();
-	canvas.width = canvas.offsetWidth;
-	canvas.height = canvas.offsetHeight;
+	canvas.width = 1000;
+	canvas.height = 667;
 
 	imageObj.onload = draw;
 	window.onresize = draw;
