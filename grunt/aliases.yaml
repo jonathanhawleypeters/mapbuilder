@@ -16,6 +16,7 @@ prod:
     - css
     - script
     - img
+    - 'copy:cname'
 img:
   description: 'copy and min images'
   tasks:

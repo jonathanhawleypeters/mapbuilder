@@ -14,6 +14,11 @@ module.exports = {
 		files: [
 			{expand: true, cwd: 'src/scripts', src: ['**'], dest: 'dist/scripts'},
 		]
+	},
+	cname: {
+		files: [
+			{expand: true, cwd: './', src: ['CNAME'], dest: 'dist'},
+		]
 	}
 
 };
