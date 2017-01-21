@@ -30,7 +30,7 @@ html:
 css:
   description: 'build and min css'
   tasks:
-    - 'copy:css'
+    - 'myth'
     - 'cssmin'
 script:
   description: 'build and min css'
