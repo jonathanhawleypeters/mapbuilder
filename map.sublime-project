@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "dist/css"
+		},
+		{
+			"path": "dist/img"
+		},
+		{
+			"path": "dist/scripts"
+		},
+		{
+			"path": "dist/index.html"
+		},
+		{
+			"path": "src"
+		},
+	]
+}

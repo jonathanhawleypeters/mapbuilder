@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!-- build:section layout.sitehead -->
+<!-- /build -->
+
+<!-- build:section layout.ariabutton -->
+<!-- /build -->
+
+</head>
+
+<!-- build:section layout.sitesvg -->
+<!-- /build -->
+
+<body>
+<!-- build:section layout.siteheader -->
+<!-- /build -->
+
+<main>
+	<aside class="main-aside">	
+		<section class="main-section">
+			<header class="form-header">
+				<h1>Hello</h1>
+			</header>
+			<form>
+				<div>
+					<input type="text" name="map-name" id="map-name" required minlength="1" placeholder=" ">
+					<label for="map-name" class="placeholder">Map Name</label>
+				</div>
+				<div>
+					<input type="text" name="map-title" id="map-title" required minlength="4" placeholder="test">
+					<label for="map-title" class="placeholder">Map Title</label>
+				</div>
+				<button class="Button" type="submit">
+					Submit
+				</button>
+			</form>
+		</section>
+	</aside>
+	<section class="section-map">
+		<header class="map-header">
+			<h1>Preview</h1>
+		</header>
+		<div class="map-container" id="map-container">
+			<canvas id="canvas-map" width="1000" height="667">HTML Canvas not supported in this browser. Please contact us.</canvas>
+			<script type="text/javascript" src="/scripts/canvas.js"></script>
+			<noscript>Please enable scripts to use the preview function.</noscript>
+		</div>
+	</section>
+</main>
+
+<!-- build:section layout.sitefooter -->
+<!-- /build -->
+</body>
+
+</html>
