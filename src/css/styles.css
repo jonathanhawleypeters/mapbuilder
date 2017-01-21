@@ -14,7 +14,8 @@
 	--base-violet: #6c71c4;		--base-violet-hsl: 237, 43%, 60%;
 	--base-cyan: #45a7b9;		--base-cyan-hsl: 189, 46%, 50%;
 	--base-blue: #2e8dcd;		--base-blue-hsl: 204, 63%, 49%;
-	--base-green: #2ecc71;		--base-green-hsl: 145, 63%, 49% ;
+	--base-green: #2ecc71;		--base-green-hsl: 145, 63%, 49%;
+	--time-menu: 0.15s;
 }
 
 html {
@@ -200,10 +201,22 @@ main {
 }
 
 /*=================
-	ASIDE
+	MENU
 =================*/
 
-.main-aside {
+.menu-button {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 4rem;
+	height: 4rem;
+	padding: 1rem;
+	font-size: 2rem;
+	background-color: hsla(var(--base-blue-hsl), 1);
+	color: hsl(var(--base-bright-hsl));
+}
+
+.menu {
 	flex-shrink: 0;
 	padding: 1rem;
 	background-color: var(--base-dark);
@@ -211,14 +224,28 @@ main {
 	width: 20rem;
 	max-height: 100%;
 	overflow-y: scroll;
+	transform: translateX(none);
+	transition: transform var(--time-menu) linear;
 }
 
-.form-header {
+.menu-hidden {
+	transform: translateX(-100%);
+}
+
+.menu-hidden ~ .section-map {
+	margin-left: -20rem;
+}
+
+.menu-header {
 	height: 4rem;
-	padding: 1rem;
+	padding: 1rem 2rem 1rem 5rem;
+	margin-left: -1rem;
+	margin-right: -1rem;
 	margin-top: -1rem;
 	display: flex;
 	align-items: center;
+	background-color: hsl(var(--base-cyan-hsl));
+	color: hsl(var(--base-bright-hsl));
 }
 
 /*=================
@@ -226,6 +253,7 @@ main {
 =================*/
 
 .section-map {
+	transition: margin var(--time-menu) linear;
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
@@ -240,7 +268,11 @@ main {
 	align-items: center;
 }
 
-canvas {
+.map-header h1 {
+	margin-left: 4rem;
+}
+
+.map-canvas {
 	max-width: 100%;
 }
 

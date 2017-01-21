@@ -16,11 +16,11 @@
 <body>
 <!-- build:section layout.siteheader -->
 <!-- /build -->
-
+<label class="menu-button" for="menu" onclick="menu.classList.toggle('menu-hidden');">X</label>	
 <main>
-	<aside class="main-aside">	
-		<section class="main-section">
-			<header class="form-header">
+	<aside class="menu" id="menu">
+		<section class="menu-section">
+			<header class="menu-header">
 				<h1>Hello</h1>
 			</header>
 			<form>
@@ -43,7 +43,7 @@
 			<h1>Preview_</h1>
 		</header>
 		<div class="map-container" id="map-container">
-			<canvas id="canvas-map" width="1000" height="667">HTML Canvas not supported in this browser. Please contact us.</canvas>
+			<canvas class="map-canvas" width="1000" height="667">HTML Canvas not supported in this browser. Please contact us.</canvas>
 			<script type="text/javascript" src="/scripts/canvas.js"></script>
 			<noscript>Please enable scripts to use the preview function.</noscript>
 		</div>

@@ -16,7 +16,7 @@ module.exports = {
 	
 	html: {
         files: [
-            'src/html/**/*.html'
+            'src/**/*.html'
         ],
         tasks: [
             'html'
