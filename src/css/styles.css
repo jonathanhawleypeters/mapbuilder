@@ -204,6 +204,7 @@ main {
 =================*/
 
 .main-aside {
+	flex-shrink: 0;
 	padding: 1rem;
 	background-color: var(--base-dark);
 	max-with: 80vw;
@@ -239,11 +240,6 @@ main {
 	align-items: center;
 }
 
-.map-container {
-	flex-grow: 1;
-	/*border: 0.1em solid grey;*/
-}
-
 canvas {
 	max-width: 100%;
 }
@@ -252,7 +248,7 @@ canvas {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100%;
+	flex-grow: 1;
 }
 
 /*=================
