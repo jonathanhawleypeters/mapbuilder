@@ -216,6 +216,11 @@ main {
 	color: hsl(var(--base-bright-hsl));
 }
 
+.menu::-webkit-scrollbar {
+	width: 0;
+	background: transparent;
+}
+
 .menu {
 	flex-shrink: 0;
 	padding: 1rem;
