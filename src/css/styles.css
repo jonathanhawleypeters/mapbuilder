@@ -257,9 +257,6 @@ main {
 }
 
 .menu-button {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 4rem;
 	height: 4rem;
 	padding: 1rem;
@@ -295,7 +292,7 @@ main {
 
 .menu-header {
 	height: 4rem;
-	padding: 1rem 0 1rem 5rem;
+	padding: 1rem;
 	margin-top: -1rem;
 	display: flex;
 	align-items: center;
@@ -320,13 +317,13 @@ main {
 	border-bottom: 0.1rem solid var(--base-darker);
 	color: hsl(var(--base-bright-hsl));
 	height: 4rem;
-	padding: 1rem;
+	padding: 1rem 0;
 	display: flex;
 	align-items: center;
 }
 
 .map-header h1 {
-	margin-left: 4rem;
+	margin-left: 1rem;
 }
 
 .map-canvas {
