@@ -160,6 +160,13 @@ textarea {
 	color: hsl(var(--base-bright-hsl))
 }
 
+.option-group {
+	border-left: 0.2em solid hsla(var(--base-darker-hsl), 1);
+	border-radius: 0.2em;
+	margin: 1rem 0;
+	padding: 1rem;
+}
+
 .option-input {
 	position: relative;
 	padding-bottom: 0.5rem;
@@ -169,14 +176,12 @@ textarea {
 	display: block;
 	position: absolute;
 	visibility: hidden;
+	margin-top: 1rem;
 }
 
-.option-toggle:checked + .option-group-label + .option-section {
-	position: static;
-	visibility: visible;
-}
-
-#map-compass-custom:checked + .radio-label + .option-section-compass {
+.option-toggle:checked + .option-group-label + .option-section,
+#map-compass-custom:checked + .radio-label + .option-section-compass
+{
 	position: inherit;
 	visibility: inherit;
 }
@@ -188,7 +193,6 @@ textarea {
 
 .option-group-label {
 	display: inline-block;
-	margin-bottom: 1em;
 	cursor: pointer;
 }
 
@@ -203,6 +207,11 @@ input[type="text"] {
 	position: absolute;
 	top: -0.25rem;
 	left: 0.5em;
+}
+
+.radio-label {
+	display: inline-block;
+	margin: 0 0 0.5em 0.5em;
 }
 
 input[type="text"]:focus + .option-label {
@@ -266,10 +275,10 @@ main {
 
 .menu {
 	flex-shrink: 0;
-	padding: 1rem;
+	padding: 1rem 0.2rem;
 	background-color: var(--base-dark);
-	max-with: 80vw;
 	width: 20rem;
+	max-with: 80vw;
 	max-height: 100vh;
 	overflow-y: auto;
 	transform: translateX(none);
@@ -286,9 +295,7 @@ main {
 
 .menu-header {
 	height: 4rem;
-	padding: 1rem 2rem 1rem 5rem;
-	margin-left: -1rem;
-	margin-right: -1rem;
+	padding: 1rem 0 1rem 5rem;
 	margin-top: -1rem;
 	display: flex;
 	align-items: center;
