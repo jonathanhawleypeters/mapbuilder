@@ -2,6 +2,11 @@ default:
   description: 'Default (production) build'
   tasks:
     - dev
+serve:
+  description: 'build and min css'
+  tasks:
+    - connect
+    - watch
 dev:
   description: 'full build of all tasks'
   tasks:
@@ -35,4 +40,5 @@ css:
 script:
   description: 'build and min css'
   tasks:
-    - 'copy:script'
+    - 'jshint'
+    - 'uglify'

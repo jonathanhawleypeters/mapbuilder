@@ -154,13 +154,35 @@ textarea {
 	box-shadow: none;
 	background: none;
 	border: none;
-	border-bottom: 0.1em solid var(--base-light);
+	border-bottom: 0.1em solid var(--base-darker);
+	border-radius: 0.1em;
 	margin: 1.5rem 0 1rem 0;
 	color: hsl(var(--base-bright-hsl))
 }
 
-form > div {
+.option-input {
 	position: relative;
+	padding-bottom: 0.5rem;
+}
+
+.option-section {
+	display: block;
+	position: absolute;
+	visibility: hidden;
+}
+
+.option-toggle:checked + .option-label + .option-section {
+	position: static;
+	visibility: visible;
+}
+
+.option-toggle {
+	margin-right: 1em;
+}
+
+.option-label {
+	display: inline-block;
+	margin-bottom: 1em;
 }
 
 input[type="text"] {
@@ -181,14 +203,24 @@ input[type="text"]:focus + .placeholder {
 	opacity: 1;
 }
 
-input[type="text"]:valid + .placeholder::after {
+input[type="text"]:focus + .placeholder::before {
+	content: ">";
+	position: absolute;
+	transform: translateX(-1.25em) translateY(2.25em);
+}
+
+input[type="text"]:valid:not(:placeholder-shown) + .placeholder::after {
 	content: "k";
 	color: var(--base-green);
 	margin-left: 0.5rem;
 }
 
+input[type="text"]:valid:not(:placeholder-shown) {
+	border-bottom: 0.1em solid var(--base-green);
+}
+
 input[type="text"]:invalid:not(:focus):not(:placeholder-shown) {
-	border-right: 0.2em solid red;
+	border-bottom: 0.1em solid var(--base-red);
 }
 
 /*=================
@@ -203,6 +235,10 @@ main {
 /*=================
 	MENU
 =================*/
+
+.menu-form {
+	padding-top: 1rem;
+}
 
 .menu-button {
 	position: absolute;
@@ -227,8 +263,8 @@ main {
 	background-color: var(--base-dark);
 	max-with: 80vw;
 	width: 20rem;
-	max-height: 100%;
-	overflow-y: scroll;
+	max-height: 100vh;
+	overflow-y: auto;
 	transform: translateX(none);
 	transition: transform var(--time-menu) linear;
 }
@@ -249,8 +285,9 @@ main {
 	margin-top: -1rem;
 	display: flex;
 	align-items: center;
-	background-color: hsl(var(--base-cyan-hsl));
+	/*background-color: hsl(var(--base-cyan-hsl));*/
 	color: hsl(var(--base-bright-hsl));
+	border-bottom: 0.1rem solid var(--base-darker);
 }
 
 /*=================
@@ -265,7 +302,8 @@ main {
 }
 
 .map-header {
-	background-color: var(--base-cyan);
+	background-color: var(--base-dark);
+	border-bottom: 0.1rem solid var(--base-darker);
 	color: hsl(var(--base-bright-hsl));
 	height: 4rem;
 	padding: 1rem;

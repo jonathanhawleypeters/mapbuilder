@@ -23,15 +23,19 @@
 			<header class="menu-header">
 				<h1>Hello</h1>
 			</header>
-			<form>
-				<div>
-					<input type="text" name="map-name" id="map-name" required minlength="1" placeholder=" ">
-					<label for="map-name" class="placeholder">Map Name</label>
-				</div>
-				<div>
-					<input type="text" name="map-title" id="map-title" required minlength="4" placeholder="test">
-					<label for="map-title" class="placeholder">Map Title</label>
-				</div>
+			<form class="menu-form">
+				<section class="option-group">
+					<input class="option-toggle" id="option-title" type="checkbox">
+					<label for="option-title" class="option-label" role="button" aria-pressed="false" onclick="handleBtnClick(event)" onKeyUp="handleBtnKeyUp(event)" tabindex="0" title="Press to read more">
+						<h3>Custom Title</h3>
+					</label>
+					<section class="option-section" >
+						<div class="option-input">
+							<input type="text" name="map-title" id="map-title-1" minlength="1" maxlength="16" placeholder="">
+							<label for="map-title-1" class="placeholder">Title Line One</label>
+						</div>
+					</section>
+				</section>
 				<button class="Button" type="submit">
 					Submit
 				</button>
