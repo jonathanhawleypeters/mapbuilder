@@ -173,7 +173,7 @@ textarea {
 }
 
 .option-section, .option-section-compass {
-	display: block;
+	display: none;
 	position: absolute;
 	visibility: hidden;
 	margin-top: 1rem;
@@ -182,6 +182,7 @@ textarea {
 .option-toggle:checked + .option-group-label + .option-section,
 #map-compass-custom:checked + .radio-label + .option-section-compass
 {
+	display: block;
 	position: inherit;
 	visibility: inherit;
 }
