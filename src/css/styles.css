@@ -165,32 +165,39 @@ textarea {
 	padding-bottom: 0.5rem;
 }
 
-.option-section {
+.option-section, .option-section-compass {
 	display: block;
 	position: absolute;
 	visibility: hidden;
 }
 
-.option-toggle:checked + .option-label + .option-section {
+.option-toggle:checked + .option-group-label + .option-section {
 	position: static;
 	visibility: visible;
 }
 
-.option-toggle {
-	margin-right: 1em;
+#map-compass-custom:checked + .radio-label + .option-section-compass {
+	position: inherit;
+	visibility: inherit;
 }
 
-.option-label {
+.option-toggle {
+	margin-right: 1em;
+	cursor: pointer;
+}
+
+.option-group-label {
 	display: inline-block;
 	margin-bottom: 1em;
+	cursor: pointer;
 }
 
 input[type="text"] {
 	padding: 0.5em;
 }
 
-.placeholder {
-	cursor: text;
+.option-label {
+	cursor: pointer;
 	opacity: 0.7;
 	transition: opacity 0.3s, color 0.3s;
 	position: absolute;
@@ -198,18 +205,18 @@ input[type="text"] {
 	left: 0.5em;
 }
 
-input[type="text"]:focus + .placeholder {
+input[type="text"]:focus + .option-label {
 	color: hsl(var(--base-blue-hsl));
 	opacity: 1;
 }
 
-input[type="text"]:focus + .placeholder::before {
+input[type="text"]:focus + .option-label::before {
 	content: ">";
 	position: absolute;
 	transform: translateX(-1.25em) translateY(2.25em);
 }
 
-input[type="text"]:valid:not(:placeholder-shown) + .placeholder::after {
+input[type="text"]:valid:not(:placeholder-shown) + .option-label::after {
 	content: "k";
 	color: var(--base-green);
 	margin-left: 0.5rem;

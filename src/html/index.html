@@ -26,17 +26,55 @@
 			<form class="menu-form">
 				<section class="option-group">
 					<input class="option-toggle" id="option-title" type="checkbox">
-					<label for="option-title" class="option-label" role="button" aria-pressed="false" onclick="handleBtnClick(event)" onKeyUp="handleBtnKeyUp(event)" tabindex="0" title="Press to read more">
+					<label for="option-title" class="option-group-label">
 						<h3>Custom Title</h3>
 					</label>
 					<section class="option-section" >
 						<div class="option-input">
 							<input type="text" name="map-title" id="map-title-1" minlength="1" maxlength="16" placeholder="">
-							<label for="map-title-1" class="placeholder">Title Line One</label>
+							<label for="map-title-1" class="option-label">Title Line One</label>
+						</div>
+						<div class="option-input">
+							<input type="text" name="map-title" id="map-title-2" minlength="1" maxlength="16" placeholder="">
+							<label for="map-title-2" class="option-label">Title Line Two</label>
+						</div>
+						<div class="option-input">
+							<input type="text" name="map-title" id="map-title-3" minlength="1" maxlength="16" placeholder="">
+							<label for="map-title-3" class="option-label">Title Line Three</label>
 						</div>
 					</section>
 				</section>
-				<button class="Button" type="submit">
+				<section class="option-group">
+					<input class="option-toggle" id="option-compass" type="checkbox">
+					<label for="option-compass" class="option-group-label">
+						<h3>Compass</h3>
+					</label>
+					<section class="option-section" >
+						<div class="option-input">
+							<input type="radio" name="map-compass" id="map-compass-large" value="map-compass-large">
+								<label for="map-compass-large" class="radio-label">Large</label><br/>
+							<input type="radio" name="map-compass" id="map-compass-small" value="map-compass-small">
+								<label for="map-compass-small" class="radio-label">Small</label><br/>
+							<input type="radio" name="map-compass" id="map-compass-custom" value="map-compass-custom">
+								<label for="map-compass-custom" class="radio-label">Custom</label>
+							<section class="option-section-compass" >
+								<div class="option-input">
+									<input type="text" name="compass-text" id="compass-text-inner" minlength="1" maxlength="16" placeholder="">
+									<label for="compass-text-inner" class="option-label">Inner Text</label>
+								</div>
+								<div class="option-input">
+									<input type="text" name="compass-text" id="compass-text-top" minlength="1" maxlength="16" placeholder="">
+									<label for="mcompass-text-top" class="option-label">Top Text</label>
+								</div>
+								<div class="option-input">
+									<input type="text" name="compass-text" id="compass-text-bottom" minlength="1" maxlength="16" placeholder="">
+									<label for="compass-text-bottom" class="option-label">Bottom Text</label>
+								</div>
+							</section>
+						</div>
+					</section>
+				</section>
+				<button type="submit">
 					Submit
 				</button>
 			</form>
